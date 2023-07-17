@@ -1,33 +1,45 @@
 import { useState } from "react";
 import "./App.css";
 
-function App() {
+function CounterApp() {
   const [count, setCount] = useState(0);
+  const [incrementValue, setIncrementValue] = useState(0);
+
+  const handleIncrement = () => {
+    setCount(count + incrementValue);
+  };
+
+  const handleDecrement = () => {
+    setCount(count - incrementValue);
+  };
+
+  const handleReset = () => {
+    setCount(0);
+  };
+
+  const handleInputChange = (event) => {
+    setIncrementValue(parseInt(event.target.value, 10));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <h1>Damian Śmigielski HOMEWORK counter app</h1>
+      <p>Count: {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
+      <button onClick={handleReset}>Reset</button>
+      <br />
+      <label>
+        Increment Value:
+        <input
+          type="number"
+          value={incrementValue}
+          onChange={handleInputChange}
+          min="0"
+        />
+      </label>
+    </div>
   );
 }
 
-export default App;
+export default CounterApp;
