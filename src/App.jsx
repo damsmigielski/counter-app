@@ -23,20 +23,23 @@ function CounterApp() {
 
   return (
     <div>
-      <h1>Damian Śmigielski HOMEWORK counter app</h1>
-      <p>Count: {count}</p>
-      <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <button onClick={handleReset}>Reset</button>
-      <br />
-      <label>
-        Increment Value:
-        <input
-          type="number"
-          value={incrementValue}
-          onChange={handleInputChange}
-        />
-      </label>
+      <div className="style">
+        <h1>Damian Śmigielski HOMEWORK counter app</h1>
+        <p>Count: {count}</p>
+        <div className="buttons">
+          <button onClick={handleIncrement}>Increment</button>
+          <button onClick={handleDecrement}>Decrement</button>
+          <button onClick={handleReset}>Reset</button>
+        </div>
+        <label>
+          Increment Value:
+          <input
+            type="number"
+            value={incrementValue}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
     </div>
   );
 }
