@@ -3,7 +3,7 @@ import "./App.css";
 
 function CounterApp() {
   const [count, setCount] = useState(0);
-  const [incrementValue, setIncrementValue] = useState(0);
+  const [incrementValue, setIncrementValue] = useState(1);
 
   const handleIncrement = () => {
     setCount(count + incrementValue);
@@ -35,7 +35,6 @@ function CounterApp() {
           type="number"
           value={incrementValue}
           onChange={handleInputChange}
-          min="0"
         />
       </label>
     </div>
