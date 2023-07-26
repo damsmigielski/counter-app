@@ -6,7 +6,24 @@
 }
 
 input {
+  margin-left: 0.5rem;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  width: 100px;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem;
 }
