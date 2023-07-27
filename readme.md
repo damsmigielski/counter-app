@@ -12,3 +12,5 @@ Zadanie 1 - rozwiązanie;
 *Użyłem hooka "useState" do przechowywania stanu licznika,
 *ostylowałem licznik wg. swojego wyczucia estetycznego,
 *deploy aplikacji z użyciem serwisu netlify.app
+
+moja aplikacja dostępna na: https://damiansmigielski-counter-app.netlify.app/
